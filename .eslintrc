@@ -1,6 +1,9 @@
 {
     "root": true,
-    "extends": "@hh.ru/eslint-config",
+    "extends": [
+        "@hh.ru/eslint-config",
+        "plugin:react/recommended"
+    ],
     "parserOptions": {
         "ecmaVersion": 7,
         "sourceType": "module",
@@ -8,5 +11,11 @@
             "jsx": true,
             "classes": true
         }
+    },
+    "plugins": [
+        "react"
+    ],
+    "rules": {
+        "class-methods-use-this": "off"
     }
 }

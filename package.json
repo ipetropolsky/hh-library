@@ -8,12 +8,16 @@
     "react-scripts": "1.1.0"
   },
   "scripts": {
+    "precommit": "npm run lint",
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "lint": "eslint src test",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
   "devDependencies": {
-    "@hh.ru/eslint-config": "^3.0.1"
+    "@hh.ru/eslint-config": "^3.0.1",
+    "eslint-plugin-react": "^7.6.1",
+    "husky": "^0.14.3"
   }
 }
