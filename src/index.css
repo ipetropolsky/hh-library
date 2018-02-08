@@ -1,5 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: underline;
+    color: #03a9f4;
+}
+
+ul {
+    list-style-type: none;
+}
+
 body {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
+    line-height: 1.5;
+}
+
+.header {
+    height: 100px;
+    padding: 0 50px;
+    font-family: "PT Serif", serif;
+    display: flex;
+    align-items: center;
+    background: #333;
+    color: #fff;
+}
+
+.header-brand {
+    font-size: 40px;
+    padding-left: 100px;
+    background: transparent url(/hh.ru-inversed__min_.svg) no-repeat 0 50%;
+}
+
+.book-list {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 20px;
+    font-family: "PT Sans", Arial, sans-serif;
+    width: 100%;
+    border-top: 1px solid #eee;
+}
+
+.book {
+    padding: 30px 50px;
+    width: 100%;
+    box-sizing: border-box;
+    border-right: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    cursor: pointer;
+}
+
+@media (min-width: 1000px) {
+    .book {
+        width: 50%;
+    }
+}
+
+@media (min-width: 1500px) {
+    .book {
+        width: 33.3333%;
+    }
+}
+
+.book:hover {
+    box-shadow: 0 0 30px rgba(0,0,0,.16);
+    background: #fdfdfd;
+    z-index: 1;
+}
+
+.book-title {
+    font-family: "PT Serif", serif;
+    line-height: 1.2;
+    font-size: 34px;
+    margin: 0.3em 0 0.7em 0;
+}
+
+.book-title__text {
+
+}
+
+.book-title__year {
+    font-size: 20px;
+    color: #aaa;
+    font-weight: normal;
+}
+
+.book-title__link {
+    text-decoration: none;
+}
+
+.authors {
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    font-size: 18px;
+    color: #aaa;
+}
+
+.authors:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 70px;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255, 0, 255, 0), #fff);
+    pointer-events: none;
+}
+
+.author {
+    display: inline-block;
+    1margin-right: 0.5em;
+}
+
+.author + .author:before {
+    content: ', ';
+}
+
+.tags {
+    font-size: 16px;
+}
+
+.tag {
+    display: inline-block;
+    margin: 0 0.5em 0.5em 0;
+    background: #eee;
+    padding: 0.3em 0.7em;
+    border-radius: 3px;
 }
